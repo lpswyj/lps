@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <meta charset="utf-8">
+    <title>轮播图测试</title>
+    <!-- 外部导入Css文件，链接式 -->
+    <link href="css/slideShow.css" rel="stylesheet" type="text/css">
+    <style>
+        p 
+        {
+           text-align: center;
+             font-size: 25px;
+              color: cadetblue;
+              font-family: fantasy;
+           }
+
+/* id选择器 */
+           #hr1
+            {
+                background-color: cadetblue;
+                height: 2px;
+                width: 75%;
+            }
+
+            /* 类选择器 */
+               .imgbox {
+             border-top: 5px solid cadetblue;
+             /* 避免因窗口变化影响图片效果 */
+            width: 60%;
+            height: 40%;
+            margin: 0 auto;
+         }
+
+            .img {
+            width: 40%;
+             height: 40%;
+            margin: 0 auto;
+            display: none;
+        }
+   </style>
+   <!-- 建立一个div控件作为图片框 -->
+   <div class="imgBox">
+    <!-- alt：图片路径失败时替换显示内容 -->
+    <img width="480" height="300" class="img-slide img" style="display: none;" alt="" src="4.jpg">
+    <img width="480" height="300" class="img-slide img" style="display: block;" alt="" src="5.jpg">
+    <img width="480" height="300" class="img-slide img" style="display: none;" alt="" src="6.jpg"> 
+    <img width="480" height="500" class="img-slide img" style="display: none;" alt="" src="7.jpg"> 
+</div>
+<script type="text/javascript">
+    // index：索引， len：长度
+    var index = 0, len;
+    // 类似获取一个元素数组
+    var imgBox = document.getElementsByClassName("img-slide");
+    len = imgBox.length;
+    imgBox[index].style.display = 'block';
+    // 逻辑控制函数
+    function slideShow() {
+        index ++;
+        // 防止数组溢出
+        if(index >= len) index = 0;
+        // 遍历每一个元素
+        for(var i=0; i<len; i++) {
+            imgBox[i].style.display = 'none';
+        }
+        // 每次只有一张图片显示
+        imgBox[index].style.display = 'block';
+    }
+    
+    // 定时器，间隔3s切换图片
+    setInterval(slideShow, 2000);
+    
+</script>
+<body>
+
+    
+    <meta charset="utf-8">
+    <title>轮播图测试</title>
+<!-- 外部导入Css文件，链接式 -->
+<link href="css/slideShow.css" rel="stylesheet" type="text/css">    
+
+<style>
+     p 
+     {
+        text-align: center;
+          font-size: 25px;
+           color: cadetblue;
+           font-family: fantasy;
+        }
+
+/* id选择器 */
+        #hr1
+         {
+             background-color: cadetblue;
+             height: 2px;
+             width: 75%;
+         }
+
+         /* 类选择器 */
+            .imgbox {
+          border-top: 5px solid cadetblue;
+          /* 避免因窗口变化影响图片效果 */
+         width: 60%;
+         height: 40%;
+         margin: 0 auto;
+      }
+
+         .img {
+         width: 40%;
+          height: 40%;
+         margin: 0 auto;
+         display: none;
+     }
+</style>
+
+
+    <!-- 建立一个div控件作为图片框 -->
+    <div class="imgBox">
+        <!-- alt：图片路径失败时替换显示内容 -->
+        <img width="480" height="300" class="img-slide img" style="display: none;" alt="" src="picture/666.jpg">
+        <img width="480" height="300" class="img-slide img" style="display: block;" alt="" src="picture/6666.jpg">
+        <img width="480" height="300" class="img-slide img" style="display: none;" alt="" src="picture/123.jpg">
+        <img width="480" height="500" class="img-slide img" style="display: none;" alt="" src="picture/bj.jpg">  
+    </div>
+
+
+<script type="text/javascript">
+    // index：索引， len：长度
+    var index = 0, len;
+    // 类似获取一个元素数组
+    var imgBox = document.getElementsByClassName("img-slide");
+    len = imgBox.length;
+    imgBox[index].style.display = 'block';
+    // 逻辑控制函数
+    function slideShow() {
+        index ++;
+        // 防止数组溢出
+        if(index >= len) index = 0;
+        // 遍历每一个元素
+        for(var i=0; i<len; i++) {
+            imgBox[i].style.display = 'none';
+        }
+        // 每次只有一张图片显示
+        imgBox[index].style.display = 'block';
+    }
+    
+    // 定时器，间隔3s切换图片
+    setInterval(slideShow, 2000);
+    
+</script>
+教学班号:通信工程1901 <p></p>
+ 姓名：王禹杰<p></p>
+ 学号：201916180129 <p></p>
+ 自我介绍：我是来自唯一以气候命名的城市中国凉都贵州省六盘水市的天蝎座男一枚，今年20岁了。<p></p>
+ 性格偏向于内向的外向之间，看人来吧，喜欢打游戏，看书，看电影，也喜欢到外面到处溜达，喜欢旅游。<p></p>
+ 这是我的学校<a href="https://www.csust.edu.cn/">长沙理工大学</a>喜欢结交朋友，和关系好的朋友一起玩耍是我最大的乐趣！<p></p>
+</body>
+</html>
